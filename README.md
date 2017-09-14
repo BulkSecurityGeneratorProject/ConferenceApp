@@ -2,6 +2,10 @@
 
 Sample application for conference
 
+## Domain
+
+![sample domain](https://github.com/jGauravGupta/ConferenceApp/blob/master/Diagram.png?raw=true)
+
 
 ## Build
 
@@ -11,4 +15,4 @@ Sample application for conference
 ## Run
 
 - `java -jar conferenceapp-1.0.jar`
-- Home Page : http://jGauravGupta:8080/conferenceapp-1.0
+- Home Page : http://localhost:8080/conferenceapp-1.0
