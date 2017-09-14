@@ -1,0 +1,26 @@
+{
+    "conferenceappApp": {
+        "speaker" : {
+            "home": {
+                "title": "Speakers",
+                "createLabel": "Genera un nuovo Speaker",
+                "createOrEditLabel": "Genera o modifica un Speaker"
+            },
+            "created": "&Egrave; stato generato un nuovo Speaker con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Speaker identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Speaker con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Speaker {{ id }}?"
+            },
+            "detail": {
+                "title": "Speaker"
+            },
+            "speakerName": "Speaker Name",
+            "email": "Email",
+            "designation": "Designation",
+            "bio": "Bio",
+            "featured": "Featured Speaker",
+            "sessions": "Sessions"
+        }
+    }
+}

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" pkg="fish.payara.conference.domain" v="4.5" rws="_15051640896332" Pws="_15051640896332" cws="_15051640896332" sm="false" xs="false" id="_15051640896331" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity lbl-ref="_150516426753011" uil="Session Catalog" compositePrimaryKeyClass="SessionPK" abs="false" class="Session" v="true" jbn="false" xre="false" m="false" rootElement="_15051640896331" id="_1505164180557">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="title" id="_150516426753011">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="description" jbp="detail" id="_150516427086712">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:ne/>
+                </jpa:bv>
+            </jpa:basic>
+            <jpa:basic attribute-type="fish.payara.conference.domain.SessionType" v="true" xvt="" name="type" id="_150516427786013">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:enumerated>DEFAULT</jpa:enumerated>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.time.LocalDate" v="true" xvt="" name="date" id="_15052441802849">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_1505164183323" v="true" xvt="" name="location" id="_15052437286578">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:many-to-one>
+            <jpa:many-to-many own="true" collection-type="java.util.List" cit="java.util.ArrayList" connected-entity-id="_1505164181844" connected-attribute-id="_150516430285916" v="true" xvt="" name="speakers" id="_150516430284315">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:join-table name="CONF_SESSION_SPEAKER"/>
+            </jpa:many-to-many>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_15051641807763">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Session.findAll">
+            <jpa:query>Select e from Session e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Session.findByTitle">
+            <jpa:query>Select s from Session s where s.title=:title</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Session.findByDescription">
+            <jpa:query>Select s from Session s where s.description=:description</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Session.findByType">
+            <jpa:query>Select s from Session s where s.type=:type</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Session.findByDate">
+            <jpa:query>Select s from Session s where s.date=:date</jpa:query>
+        </jpa:nq>
+        <jpa:table name="CONF_SESSION"/>
+    </jpa:entity>
+    <jpa:entity lbl-ref="_150516421402810" compositePrimaryKeyClass="SpeakerPK" abs="false" class="Speaker" v="true" jbn="false" xre="false" m="false" rootElement="_15051640896331" id="_1505164181844">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" jbp="speakerName" id="_150516421402810">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:ne/>
+                </jpa:bv>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="email" id="_150516613710299">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:em/>
+                </jpa:bv>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="pin" ui="false" jbt="true" id="_15053031182606">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="fish.payara.conference.domain.DesignationType" v="true" xvt="" name="designation" id="_15052463944876">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:enumerated>DEFAULT</jpa:enumerated>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="bio" id="_15052367164126">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="boolean" v="true" xvt="" name="featured" uil="Featured Speaker" id="_150516530724126">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:many-to-many collection-type="java.util.List" cit="java.util.ArrayList" connected-entity-id="_1505164180557" connected-attribute-id="_150516430284315" v="true" xvt="" name="sessions" id="_150516430285916">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:many-to-many>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_15051641818445">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Speaker.findAll">
+            <jpa:query>Select e from Speaker e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Speaker.findByName">
+            <jpa:query>Select s from Speaker s where s.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Speaker.findByFeatured">
+            <jpa:query>Select s from Speaker s where s.featured=:featured</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Speaker.findByEmail">
+            <jpa:query>Select s from Speaker s where s.email=:email</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Speaker.findByBio">
+            <jpa:query>Select s from Speaker s where s.bio=:bio</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Speaker.findByDateOfBirth">
+            <jpa:query>Select s from Speaker s where s.dateOfBirth=:dateOfBirth</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Speaker.findByDesignation">
+            <jpa:query>Select s from Speaker s where s.designation=:designation</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Speaker.findByPin">
+            <jpa:query>Select s from Speaker s where s.pin=:pin</jpa:query>
+        </jpa:nq>
+        <jpa:table name="CONF_SPEAKER"/>
+    </jpa:entity>
+    <jpa:entity lbl-ref="_150516431147017" compositePrimaryKeyClass="LocationPK" abs="false" class="Location" v="true" jbn="false" xre="false" m="false" rootElement="_15051640896331" id="_1505164183323">
+        <jpa:ath>gaura</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_150516431147017">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="hallNumber" id="_15054109452197">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_15051641833237">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Location.findAll">
+            <jpa:query>Select e from Location e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Location.findByName">
+            <jpa:query>Select s from Location s where s.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Location.findByStartTime">
+            <jpa:query>Select s from Location s where s.startTime=:startTime</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Location.findByEndTime">
+            <jpa:query>Select s from Location s where s.endTime=:endTime</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Location.findByHallNumber">
+            <jpa:query>Select l from Location l where l.hallNumber=:hallNumber</jpa:query>
+        </jpa:nq>
+        <jpa:table name="CONF_LOCATION"/>
+    </jpa:entity>
+    <jpa:snp loc="BEFORE_PACKAGE" e="true">/**
+ * This file was generated by the Jeddict
+ */</jpa:snp>
+    <jpa:c/>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_15051640896332">
+            <i ref="_1505164183323" x="223" y="409"/>
+            <i ref="_1505164180557" x="33" y="93"/>
+            <i ref="_1505164181844" x="402" y="17"/>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>

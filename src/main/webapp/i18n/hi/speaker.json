@@ -1,0 +1,26 @@
+{
+    "conferenceappApp": {
+        "speaker" : {
+            "home": {
+                "title": "Speakers",
+                "createLabel": "नया Speaker बनाएँ",
+                "createOrEditLabel": "Speaker बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Speaker [identifier: {{ param }}] तैयार है",
+            "updated": "एक Speaker [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Speaker [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Speaker [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Speaker"
+            },
+            "speakerName": "Speaker Name",
+            "email": "Email",
+            "designation": "Designation",
+            "bio": "Bio",
+            "featured": "Featured Speaker",
+            "sessions": "Sessions"
+        }
+    }
+}

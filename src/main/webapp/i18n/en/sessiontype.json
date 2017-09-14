@@ -1,0 +1,13 @@
+{
+    "conferenceappApp": {
+        "SessionType" : {
+            "null": "",
+            "BOF": "BOF",
+            "CONFERENCE": "CONFERENCE",
+            "HANDS_ON_LAB": "HANDS_ON_LAB",
+            "IGNITE": "IGNITE",
+            "KEYNOTE": "KEYNOTE",
+            "TUTORIAL": "TUTORIAL"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "home": {
+        "title": "Merhaba, Java Duke!",
+        "subtitle": "Burası Ana Sayfanız",
+        "logged": {
+            "message": "\"{{username}}\" olarak giriş yaptınız."
+        },
+        "question": "Jeddict hakkında sorularınız için:",
+        "link": {
+            "homepage": "Jeddict ana sayfa",
+            "stackoverflow": "Stack Overflow'da Jeddict",
+            "bugtracker": "Jeddict hata yönetimi",
+            "chat": "Jeddict genel sohbet odası",
+            "follow": "Twitter'da @ImJeddict adresinden ulaşabilirsiniz"
+        },
+        "like": "Jeddict'ı beğendiysenizi yıldız vermeyi unutmayın",
+        "github": "GitHub"
+    }
+}

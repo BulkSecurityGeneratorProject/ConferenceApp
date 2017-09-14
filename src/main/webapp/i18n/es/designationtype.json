@@ -1,0 +1,12 @@
+{
+    "conferenceappApp": {
+        "DesignationType" : {
+            "null": "",
+            "JAVEONE_ROCKSTAR": "JAVEONE_ROCKSTAR",
+            "JAVA_CHAMPION": "JAVA_CHAMPION",
+            "ORACLE_ACE": "ORACLE_ACE",
+            "ORACLE_CERTIFIED": "ORACLE_CERTIFIED",
+            "ORACLE_DEVELOPER_CHAMPION": "ORACLE_DEVELOPER_CHAMPION"
+        }
+    }
+}

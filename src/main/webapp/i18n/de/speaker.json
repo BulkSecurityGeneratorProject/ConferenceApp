@@ -1,0 +1,26 @@
+{
+    "conferenceappApp": {
+        "speaker" : {
+            "home": {
+                "title": "Speakers",
+                "createLabel": "Speaker erstellen",
+                "createOrEditLabel": "Speaker erstellen oder bearbeiten"
+            },
+            "created": "Speaker erstellt mit ID {{ param }}",
+            "updated": "Speaker aktualisiert mit ID {{ param }}",
+            "deleted": "Speaker gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Speaker {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Speaker"
+            },
+            "speakerName": "Speaker Name",
+            "email": "Email",
+            "designation": "Designation",
+            "bio": "Bio",
+            "featured": "Featured Speaker",
+            "sessions": "Sessions"
+        }
+    }
+}

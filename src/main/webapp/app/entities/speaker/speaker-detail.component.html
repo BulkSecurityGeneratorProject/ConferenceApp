@@ -1,0 +1,41 @@
+
+<div *ngIf="speaker">
+    <h2><span jhiTranslate="conferenceappApp.speaker.detail.title">Speaker</span> {{speaker.id}}</h2>
+    <hr>
+    <fish-alert-error></fish-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="conferenceappApp.speaker.speakerName">Speaker Name</span></dt>
+        <dd>
+            <span>{{speaker.speakerName}}</span>
+        </dd>
+        <dt><span jhiTranslate="conferenceappApp.speaker.email">Email</span></dt>
+        <dd>
+            <span>{{speaker.email}}</span>
+        </dd>
+        <dt><span jhiTranslate="conferenceappApp.speaker.designation">Designation</span></dt>
+        <dd>
+            <span jhiTranslate="{{'conferenceappApp.DesignationType.' + speaker.designation}}">{{speaker.designation}}</span>
+        </dd>
+        <dt><span jhiTranslate="conferenceappApp.speaker.bio">Bio</span></dt>
+        <dd>
+            <span>{{speaker.bio}}</span>
+        </dd>
+        <dt><span jhiTranslate="conferenceappApp.speaker.featured">Featured Speaker</span></dt>
+        <dd>
+            <span>{{speaker.featured}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'speaker/'+ speaker.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

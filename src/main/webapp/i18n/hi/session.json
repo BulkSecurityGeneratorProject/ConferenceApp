@@ -1,0 +1,26 @@
+{
+    "conferenceappApp": {
+        "session" : {
+            "home": {
+                "title": "Sessions",
+                "createLabel": "नया Session Catalog बनाएँ",
+                "createOrEditLabel": "Session Catalog बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Session Catalog [identifier: {{ param }}] तैयार है",
+            "updated": "एक Session Catalog [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Session Catalog [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Session Catalog [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Session Catalog"
+            },
+            "title": "Title",
+            "detail": "Detail",
+            "type": "Type",
+            "date": "Date",
+            "location": "Location",
+            "speakers": "Speakers"
+        }
+    }
+}

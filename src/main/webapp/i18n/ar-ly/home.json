@@ -1,0 +1,19 @@
+{
+    "home": {
+        "title": "أهلا وسهلا بك، جافا هبستر!",
+        "subtitle": "هذه صفحتك الرئيسية",
+        "logged": {
+            "message": "قمت بتسجيل الدخول كمستخدم \"{{username}}\"."
+        },
+        "question": "إذا كان لديك أي سؤال حول Jeddict:",
+        "link": {
+            "homepage": "Jeddict homepage",
+            "stackoverflow": "Jeddict on Stack Overflow",
+            "bugtracker": "Jeddict bug tracker",
+            "chat": "Jeddict public chat room",
+            "follow": "follow @imjeddict on Twitter"
+        },
+        "like": "إذا كنت تحب Jeddict، لا تنسى أن تعطي لنا نجم على",
+        "github": "GitHub"
+    }
+}

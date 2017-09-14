@@ -1,0 +1,64 @@
+<div>
+    <h2>
+        <span jhiTranslate="conferenceappApp.speaker.home.title">Speakers</span>
+        <button class="btn btn-primary float-right jh-create-entity create-speaker" [routerLink]="['/', { outlets: { popup: ['speaker-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="conferenceappApp.speaker.home.createLabel">
+            Create new Speaker
+            </span>
+        </button>
+    </h2>
+    <fish-alert></fish-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="speakers">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="conferenceappApp.speaker.speakerName">Speaker Name</span></th>
+            <th><span jhiTranslate="conferenceappApp.speaker.email">Email</span></th>
+            <th><span jhiTranslate="conferenceappApp.speaker.designation">Designation</span></th>
+            <th><span jhiTranslate="conferenceappApp.speaker.bio">Bio</span></th>
+            <th><span jhiTranslate="conferenceappApp.speaker.featured">Featured Speaker</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let speaker of speakers ;trackBy: trackId">
+                <td><a [routerLink]="['../speaker', speaker.id ]">{{speaker.id}}</a></td>
+                <td>{{speaker.speakerName}}</td>
+                <td>{{speaker.email}}</td>
+                <td jhiTranslate="{{'conferenceappApp.DesignationType.' + speaker.designation}}">{{speaker.designation}}</td>
+                <td>{{speaker.bio}}</td>
+                <td>{{speaker.featured}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../speaker', speaker.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'speaker/'+ speaker.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'speaker/'+ speaker.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

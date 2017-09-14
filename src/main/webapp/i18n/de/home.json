@@ -1,0 +1,19 @@
+{
+    "home": {
+        "title": "Willkommen, Java Duke!",
+        "subtitle": "Dies ist Ihre Hauptseite",
+        "logged": {
+            "message": "Sie sind als Benutzer \"{{username}}\" angemeldet."
+        },
+        "question": "Wenn Sie Fragen zu Jeddict haben:",
+        "link": {
+            "homepage": "Jeddict Hauptseite",
+            "stackoverflow": "Jeddict auf Stack Overflow",
+            "bugtracker": "Jeddict Fehlereinträge",
+            "chat": "Jeddict Chat",
+            "follow": "kontaktieren Sie uns mit @ImJeddict auf Twitter"
+        },
+        "like": "Wenn Sie Jeddict mögen, vergessen Sie nicht uns einen Stern zu geben auf",
+        "github": "GitHub"
+    }
+}

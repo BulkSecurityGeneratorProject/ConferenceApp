@@ -1,0 +1,26 @@
+{
+    "conferenceappApp": {
+        "session" : {
+            "home": {
+                "title": "Sessions",
+                "createLabel": "Créer un nouveau Session Catalog",
+                "createOrEditLabel": "Créer ou éditer un Session Catalog"
+            },
+            "created": "Un nouveau Session Catalog a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Session Catalog avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Session Catalog avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Session Catalog {{ id }} ?"
+            },
+            "detail": {
+                "title": "Session Catalog"
+            },
+            "title": "Title",
+            "detail": "Detail",
+            "type": "Type",
+            "date": "Date",
+            "location": "Location",
+            "speakers": "Speakers"
+        }
+    }
+}
